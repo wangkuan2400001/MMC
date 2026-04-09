@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>MMC — Pose Demo（教学版）</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="module" src="./js/mediapipe-loader.js"></script>
+
+</head>
+<body>
+  <header>
+    <h1>MMC — Pose Demo（教学版）</h1>
+    <p>基于 MediaPipe 的实时姿态估计示例（教学与交互用）</p>
+  </header>
+
+  <main>
+    <div id="controls">
+      <button id="startBtn">开始摄像头</button>
+      <label><input id="flip" type="checkbox"> 镜像显示</label>
+    </div>
+
+    <video id="input_video" autoplay playsinline style="display:none;"></video>
+    <canvas id="output_canvas"></canvas>
+
+    <section id="notes">
+      <h3>说明</h3>
+      <ul>
+        <li>页面通过浏览器请求摄像头，请允许摄像头权限。</li>
+        <li>本示例使用 MediaPipe CDN，若需离线请把模型/WASM 放入 docs/vendor 并调整 locateFile。</li>
+        <li>本项目为教学演示，非官方产品；已在仓库 README 中保留 MediaPipe 许可说明。</li>
+      </ul>
+    </section>
+  </main>
+
+  <script type="module" src="./js/mediapipe-loader.js"></script>
+</body>
+</html>
